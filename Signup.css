@@ -1,0 +1,211 @@
+/* === GLOBAL FONT === */
+.signup-page {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceOnceStayUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+/* === SIGNUP PAGE WRAPPER === */
+.signup-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* === LEFT PANEL === */
+.signup-left-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeSlideUp 0.5s ease-out;
+}
+
+.signup-left-panel h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  /* margin-top : -370px */
+}
+
+.signup-left-panel p {
+  font-size: 1.1rem;
+  max-width: 400px;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.auth-switch-btn {
+  background-color: white;
+  color: #3a7bd5;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.auth-switch-btn:hover {
+  background-color: #e6e6e6;
+}
+
+/* === RIGHT PANEL === */
+.signup-right-panel {
+  flex: 1;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === FORM CONTAINER === */
+.signup-form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  max-width: 400px;
+  animation: fadeSlideUp 0.5s ease-out;
+  height: 470px;
+}
+
+.signup-form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-family: 'Montserrat', sans-serif;
+  width : 100%;
+}
+
+/* === INPUT FIELDS === */
+.input-icon {
+  position: relative;
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+
+.input-icon .icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 16px;
+}
+
+.input-icon input {
+  width: 100%;
+  padding: 12px 12px 12px 38px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.input-icon input::placeholder {
+  color: #666;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.input-icon input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+/* === BUTTON === */
+.signup-form-container button[type="submit"] {
+  width: 100%;
+  background-color: #000;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
+}
+
+.signup-form-container button[type="submit"]:hover {
+  background-color: #333333;
+  animation: bounceOnceStayUp 0.4s forwards;
+}
+
+/* === TOGGLE LINK === */
+.toggle-link {
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+
+}
+
+.toggle-link span {
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.toggle-link span:hover {
+  text-decoration: underline;
+}
+
+/* === OR SEPARATOR === */
+.or-separator {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #888;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.signup-heading-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.signup-heading {
+  margin-top: 0px;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
+}

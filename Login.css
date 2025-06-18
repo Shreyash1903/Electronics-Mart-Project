@@ -1,0 +1,240 @@
+/* === GLOBAL FONT === */
+.auth-container,
+.signup-page,
+.login-page {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* === FADE ANIMATION === */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceOnceStayUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+/* === AUTH CARD CONTAINER === */
+.auth-container {
+  width: 345px;
+  margin: 30px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeSlideUp 0.5s ease-out;
+}
+
+/* === FORM ELEMENTS === */
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.input-icon .icon {
+  position: absolute;
+  left: 14px;
+  font-size: 16px;
+  color: #000000;
+}
+
+.input-icon input {
+  width: 100%;
+  padding: 14px 16px;
+  padding-left: 40px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-icon input:hover {
+  border-color: #555555;
+  background-color: #f9f9f9;
+}
+
+.input-icon input:focus {
+  outline: none;
+  border-color: #333333;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+}
+
+/* === BUTTONS === */
+.auth-container button {
+  padding: 14px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-container button:hover {
+  background-color: #333333;
+  animation: bounceOnceStayUp 0.4s forwards;
+}
+
+button[type="submit"]:hover {
+  background-color: #333333;
+}
+
+/* === TEXT LINKS & MESSAGES === */
+.auth-container p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #4a5568;
+  font-weight: 600;
+}
+
+.auth-container span {
+  color: #000000;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth-container span:hover {
+  color: #333333;
+  text-decoration: underline;
+}
+
+/* === PAGE LAYOUT === */
+.login-layout {
+  display: flex;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* === LEFT PANEL === */
+.left-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.left-panel h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  margin-top: -170px;
+}
+
+.left-panel p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.brand-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.brand-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 1rem;
+  justify-items: start;
+}
+
+.brand-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  gap: 10px;
+}
+
+.brand-list img {
+  width: 28px;
+  height: auto;
+  object-fit: contain;
+  background: white;
+  padding: 2px;
+  border-radius: 6px;
+}
+
+/* === RIGHT PANEL === */
+.right-panel {
+  flex: 1;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.login-page {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-heading,
+.signup-heading {
+  font-size: 32px;
+  margin-bottom: 2rem;
+  color: black;
+  text-align: center;
+}
+
+/* === MOBILE RESPONSIVE === */
+@media screen and (max-width: 768px) {
+  .login-layout {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .right-panel {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .auth-container {
+    padding: 25px;
+    margin: 40px 16px;
+  }
+}
+

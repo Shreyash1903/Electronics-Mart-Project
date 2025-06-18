@@ -1,0 +1,136 @@
+/* === GLOBAL FONT === */
+.forgot-container,
+.forgot-page {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* === CENTERING PAGE === */
+.forgot-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+/* === FADE ANIMATION === */
+@keyframes forgotFadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes forgotBounceOnceStayUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+/* === FORM CONTAINER === */
+.forgot-container {
+  max-width: 390px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: forgotFadeSlideUp 0.5s ease-out;
+  margin-top: 1px;
+}
+
+/* === FORM ELEMENTS === */
+.forgot-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.forgot-input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.forgot-input-icon .forgot-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 16px;
+  color: #000000;
+}
+
+.forgot-input-icon input {
+  width: 100%;
+  padding: 14px 16px;
+  padding-left: 40px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.forgot-input-icon input:hover {
+  border-color: #555555;
+  background-color: #f9f9f9;
+}
+
+.forgot-input-icon input:focus {
+  outline: none;
+  border-color: #333333;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.forgot-container input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+}
+
+/* === BUTTON === */
+.forgot-button {
+  padding: 14px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.forgot-button:hover {
+  background-color: #333333;
+  animation: forgotBounceOnceStayUp 0.4s forwards;
+}
+
+/* === HEADING === */
+.forgot-heading {
+  font-size: 32px;
+  margin-bottom: 2rem;
+  color: black;
+  text-align: center;
+  margin-top: -400px;
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 480px) {
+  .forgot-container {
+    padding: 25px;
+    margin: 40px 16px;
+  }
+}

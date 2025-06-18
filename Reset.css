@@ -1,0 +1,136 @@
+/* === GLOBAL FONT === */
+.reset-page,
+.reset-container {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* === CENTERING PAGE === */
+.reset-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+/* === FADE ANIMATION === */
+@keyframes resetFadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes resetBounceOnceStayUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+/* === FORM CONTAINER === */
+.reset-container {
+  max-width: 390px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: resetFadeSlideUp 0.5s ease-out;
+  margin-top: 1px;
+}
+
+/* === FORM ELEMENTS === */
+.reset-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.reset-input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.reset-input-icon .reset-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 16px;
+  color: #000000;
+}
+
+.reset-input-icon input {
+  width: 100%;
+  padding: 14px 16px;
+  padding-left: 40px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.reset-input-icon input:hover {
+  border-color: #555555;
+  background-color: #f9f9f9;
+}
+
+.reset-input-icon input:focus {
+  outline: none;
+  border-color: #333333;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.reset-container input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+}
+
+/* === BUTTON === */
+.reset-button {
+  padding: 14px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reset-button:hover {
+  background-color: #333333;
+  animation: resetBounceOnceStayUp 0.4s forwards;
+}
+
+/* === HEADING === */
+.reset-heading {
+  font-size: 32px;
+  margin-bottom: 2rem;
+  color: black;
+  text-align: center;
+  margin-top: -300px;
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 480px) {
+  .reset-container {
+    padding: 25px;
+    margin: 40px 16px;
+  }
+}

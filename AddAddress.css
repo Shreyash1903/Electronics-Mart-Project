@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Page heading outside card */
+.page-heading {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #2c3e50;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Container */
+.add-address-container {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  padding: 24px 28px;
+  background-color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Form */
+.add-address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form row: for pairs of inputs side by side */
+.add-address-form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* For each input+label group inside form row */
+.add-address-form-row > div {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styling */
+.add-address-form-row label,
+.add-address-form > div > label {
+  font-weight: 600;
+  color: #555;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 6px;
+}
+
+/* For single column labels inside form */
+.add-address-form > div:not(.add-address-form-row) {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-address-form > div:not(.add-address-form-row) label {
+  flex: none;
+}
+
+/* Required star */
+.required {
+  color: #e74c3c;
+  margin-left: 2px;
+}
+
+/* Input styling */
+.add-address-input {
+  padding: 11px 14px;
+  border: 1.8px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline-offset: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Light black border on hover */
+.add-address-input:hover {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.add-address-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.35);
+}
+
+/* Button styling */
+.btn {
+  padding: 13px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Full width button */
+.btn-fullwidth {
+  width: 100%;
+  margin-top: 18px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .add-address-form-row {
+    flex-direction: column;
+  }
+
+  .add-address-form-row > div {
+    flex: 1 1 100%;
+  }
+}

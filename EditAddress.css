@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Container */
+.edit-page {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 24px 28px;
+  background-color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border-radius: 16px; /* Increased roundness */
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Title */
+.edit-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Content wrapper */
+.edit-content {
+  width: 100%;
+}
+
+/* Form */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form row: two inputs side by side */
+.edit-form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Label styling */
+.edit-form-row label {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #555;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Required star */
+.required {
+  color: #e74c3c;
+  margin-left: 2px;
+}
+
+/* Input styling */
+.edit-form-input {
+  margin-top: 6px;
+  padding: 11px 14px;
+  border: 1.8px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline-offset: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.edit-form-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.35);
+}
+
+/* Button styling */
+.btn {
+  padding: 13px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Full width button */
+.btn-fullwidth {
+  width: 100%;
+  margin-top: 18px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .edit-form-row {
+    flex-direction: column;
+  }
+
+  .edit-form-row label {
+    flex: 1 1 100%;
+  }
+}

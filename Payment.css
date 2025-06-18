@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.payment-container {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Changed from center to flex-start to move card up */
+  min-height: 100vh;
+  padding-top: 60px; /* Added top padding to position card higher */
+  padding-bottom: 40px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+}
+
+.payment-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+  /* Removed transform transition to prevent movement */
+  margin-top: 0; /* Ensures no additional spacing */
+}
+
+/* Removed the .payment-card:hover transform effect */
+
+.payment-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.payment-header h2 {
+  color: #2d3436;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.payment-header p {
+  color: #636e72;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.payment-summary {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #2d3436;
+  font-weight: 500;
+}
+
+.summary-item.total {
+  font-weight: 600;
+  font-size: 18px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 10px;
+}
+
+.payment-methods {
+  margin-bottom: 25px;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border: 1px solid #dfe6e9;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.payment-method.selected {
+  border-color: #3399cc;
+  background-color: rgba(51, 153, 204, 0.05);
+}
+
+.method-icon {
+  margin-right: 15px;
+}
+
+.method-icon img {
+  width: 40px;
+  height: auto;
+}
+
+.method-info h4 {
+  margin: 0;
+  color: #2d3436;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.method-info p {
+  margin: 4px 0 0;
+  color: #636e72;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.pay-button {
+  background-color: #3399cc;
+  color: #fff;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 15px rgba(51, 153, 204, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pay-button:hover {
+  background-color: #287ba3;
+  box-shadow: 0 8px 25px rgba(40, 123, 163, 0.6);
+  /* Removed transform to prevent movement */
+}
+
+.pay-button:disabled {
+  background-color: #a0c4dd;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.payment-security {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 13px;
+  color: #636e72;
+}
+
+.security-badge {
+  display: inline-flex;
+  align-items: center;
+}
+
+.lock-icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .payment-container {
+    padding: 40px 20px 20px;
+  }
+  
+  .payment-card {
+    padding: 25px;
+  }
+  
+  .payment-header h2 {
+    font-size: 22px;
+  }
+  
+  .summary-item {
+    font-size: 15px;
+  }
+}

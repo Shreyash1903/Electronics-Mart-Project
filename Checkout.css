@@ -1,0 +1,293 @@
+/* Import Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.checkout-container {
+  max-width: 700px; /* Smaller card width */
+  margin: auto;
+  padding: 24px;
+  font-family: 'Montserrat', "Segoe UI", sans-serif;
+  background-color: #f9fafb;
+  color: #222;
+}
+
+.section {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.section:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.section-header {
+  background-color: #1e73f6;
+  color: white;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-header span {
+  background: #0d5be1;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 14px;
+}
+
+/* + Add New button in header */
+.section-header button {
+  background-color: #ffffff; /* White background */
+  border: none;
+  color: #1e73f6; /* Blue text */
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  font-family: 'Montserrat', "Segoe UI", sans-serif;
+}
+
+.section-header button:hover {
+  background-color: #f1f5ff; /* Very light blue on hover */
+  color: #0d5be1; /* Slightly deeper blue */
+  transform: translateY(-1px);     /* Slight lift on hover */
+  box-shadow: 0 4px 10px rgba(30, 115, 246, 0.25);
+}
+
+.section-content {
+  padding: 24px;
+}
+
+.address-card {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+  box-shadow: 0 1px 3px rgba(30, 115, 246, 0.05);
+}
+
+.address-card:hover {
+  border-color: #1e73f6;
+  box-shadow: 0 4px 8px rgba(30, 115, 246, 0.15);
+}
+
+.address-card.selected {
+  background-color: #eaf1ff;
+  border-color: #1e73f6;
+  box-shadow: 0 6px 12px rgba(30, 115, 246, 0.25);
+}
+
+.address-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.address-header h4 {
+  font-weight: 700;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
+.address-phone {
+  font-weight: 500;
+  font-size: 14px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.address-detail {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #555;
+  line-height: 1.6;
+  white-space: normal;       /* Allow text to wrap */
+  word-wrap: break-word;     /* Break long words */
+  overflow-wrap: break-word; /* Safer fallback */
+}
+
+.deliver-btn {
+  margin-top: 14px;
+  background-color: #ff5a1f;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 8px rgba(255, 90, 31, 0.35);
+}
+
+.deliver-btn:hover {
+  background-color: #e24d14;
+  box-shadow: 0 4px 12px rgba(226, 77, 20, 0.45);
+}
+
+.add-address-btn {
+  color: #1e73f6;
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  transition: color 0.2s ease;
+}
+
+.add-address-btn:hover {
+  color: #155cd1;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.order-total {
+  font-weight: 700;
+  font-size: 18px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  color: #111;
+  letter-spacing: 0.02em;
+}
+
+.payment-option {
+  margin-bottom: 14px;
+  font-size: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.payment-option input[type="radio"] {
+  margin-right: 10px;
+  cursor: pointer;
+  accent-color: #1e73f6;
+}
+
+.payment-option.text-gray-400 {
+  color: #aaa;
+  font-style: italic;
+  cursor: not-allowed;
+}
+
+.place-order-btn {
+  background-color: #1e73f6;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 24px;
+  letter-spacing: 0.04em;
+  box-shadow: 0 5px 15px rgba(30, 115, 246, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-order-btn:hover {
+  background-color: #155cd1;
+  box-shadow: 0 6px 20px rgba(21, 92, 209, 0.6);
+}
+
+/* CONTINUE button in order summary */
+.continue-btn {
+  background-color: #1e73f6; /* Blue background */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  font-family: 'Montserrat', "Segoe UI", sans-serif;
+}
+
+.continue-btn:hover {
+  background-color: #155cd1; /* Darker blue */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(21, 92, 209, 0.4);
+}
+
+.edit-btn {
+  background-color: #ffffff;
+  border: none;
+  color: #1e73f6;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-btn:hover {
+  background-color: #edf3ff;
+  color: #0d5be1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(30, 115, 246, 0.25);
+}
+
+.qty-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #d1d5db;
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.qty-btn:hover {
+  background-color: #c0c0c0;
+}
+
+.remove-btn {
+  background-color: #e74c3c; /* nice red */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.5);
+}
+

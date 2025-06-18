@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.my-address-container {
+  max-width: 720px;
+  margin: 40px auto 60px;
+  padding: 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #2c3e50;
+}
+
+.my-address-heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #34495e;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 18px;
+  color: #7f8c8d;
+}
+
+.empty-text {
+  margin-bottom: 20px;
+}
+
+/* Addresses list container */
+.addresses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual address card */
+.address-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1.5px solid transparent;
+}
+
+.address-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
+}
+
+.address-name {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.address-line {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.address-phone {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Button group inside card */
+.btn-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+/* Buttons */
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  flex: 1 1 auto;
+  min-width: 140px;
+  text-align: center;
+  color: white;
+  user-select: none;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-success {
+  background-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #1e7e34;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .my-address-container {
+    padding: 0 15px;
+  }
+
+  .address-card {
+    padding: 18px 20px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 10px 18px;
+    min-width: 100%;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

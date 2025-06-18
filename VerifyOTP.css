@@ -1,0 +1,119 @@
+/* === OTP Page Styles === */
+.otp-wrapper {
+  min-height: calc(100vh - 60px); /* Adjust if your navbar is 60px tall */
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  align-items: center;
+  justify-content: flex-start; /* Align content to top instead of center */
+  padding: 60px 20px 30px; /* Top padding adjusted for space from navbar */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.otp-main-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1c1c1c;
+  margin-bottom: 25px;
+}
+
+.otp-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.otp-subtext {
+  font-size: 16px;
+  color: #4a4a4a;
+  margin-bottom: 16px;
+}
+
+.otp-timer {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.resend-text {
+  color: #000;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.resend-text:hover {
+  text-decoration: underline;
+}
+
+/* === Smaller OTP Boxes === */
+.otp-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.otp-inputs input {
+  width: 40px;
+  height: 46px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif; /* Scoped font */
+}
+
+.otp-inputs input:focus {
+  border-color: #999; /* light black */
+  outline: none;
+  background-color: #fff;
+}
+
+.otp-inputs input.filled {
+  border-color: #28a745;
+}
+
+/* === Submit Button for OTP === */
+.submit-btn {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: 'Montserrat', sans-serif; /* Scoped font */
+}
+
+.submit-btn:hover {
+  background-color: #222;
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 25px;
+    margin: 40px 16px;
+  }
+
+  .otp-card {
+    padding: 30px 20px;
+  }
+
+  .otp-inputs input {
+    width: 36px;
+    height: 44px;
+  }
+}
